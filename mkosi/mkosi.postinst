@@ -1,12 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
+
 export DEBIAN_FRONTEND=noninteractive
 export APT_LISTCHANGES_FRONTEND=none
-
-# debootstrap does not use these repositories by default.
-# Add them manually and update the system to make sure all the packets are up-to-date
-echo 'deb http://deb.debian.org/debian buster-updates main' >> /etc/apt/sources.list
-echo 'deb http://security.debian.org/debian-security buster/updates main' >> /etc/apt/sources.list
 
 # Add knot-resolver CZ.NIC repository. It's newer and less buggy than in Debian repos.
 cd /tmp
@@ -35,3 +31,7 @@ systemctl enable systemd-networkd \
                  antizapret-update.service antizapret-update.timer \
                  dnsmap openvpn-generate-keys \
                  openvpn-server@antizapret openvpn-server@antizapret-tcp
+
+
+# Apply paches
+patch -u /root/antizapret/parse.sh /root/patches/parse.sh.patch
