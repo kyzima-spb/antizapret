@@ -8,12 +8,14 @@ Release=buster
 #Format=directory
 Format=tar
 Output=rootfs.tar.xz
+Bootable=no
 
 [Validation]
 CheckSum=true
 Sign=true
 # ProstoVPN PGP key ID
-Key=7135A006B28E1285
+# Key=7135A006B28E1285
+Key=DEA196B750A0EDC3
 
 [Packages]
 WithNetwork=true
