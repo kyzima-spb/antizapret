@@ -42,4 +42,5 @@ Packages=bash
          nano
          vim-tiny
          git
+         fping
          patch
