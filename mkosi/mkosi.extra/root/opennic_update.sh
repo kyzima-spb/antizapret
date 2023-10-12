@@ -7,12 +7,7 @@ confFile='result/opennic.conf'
 echo -n 'Update OpenNIC DNS servers...'
 
 echo 'opennic_hosts = {' > "$confFile"
-
-curl -s "$apiUrl" | fping | awk '{if ($3 == "alive") print $1 }' | while read -r ip
-do
-    echo "${ip@Q}," >> "$confFile"
-done
-
+curl -s "$apiUrl" | fping | awk '$3 == "alive" {print "\"" $1 "\","}' >> "$confFile"
 echo '}' >> "$confFile"
 
 echo '[OK]'
