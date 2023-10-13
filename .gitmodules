@@ -1,0 +1,3 @@
+[submodule "antizapret-vpn-container"]
+	path = antizapret-vpn-container
+	url = git@github.com:kyzima-spb/antizapret-vpn-container.git
