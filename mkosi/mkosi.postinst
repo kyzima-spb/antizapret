@@ -13,6 +13,8 @@ apt -o Dpkg::Options::="--force-confold" -y full-upgrade
 
 cd /root
 git clone https://bitbucket.org/anticensority/antizapret-pac-generator-light.git antizapret
+# Apply patch
+git apply --directory antizapret patch.diff && rm patch.diff
 mv -f antizapret-process.sh antizapret/process.sh
 
 
@@ -31,7 +33,3 @@ systemctl enable systemd-networkd \
                  antizapret-update.service antizapret-update.timer \
                  dnsmap openvpn-generate-keys \
                  openvpn-server@antizapret openvpn-server@antizapret-tcp
-
-
-# Apply paches
-patch -u /root/antizapret/parse.sh /root/patches/parse.sh.patch

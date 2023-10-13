@@ -43,4 +43,3 @@ Packages=bash
          vim-tiny
          git
          fping
-         patch
