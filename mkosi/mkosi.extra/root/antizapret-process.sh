@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-set -e
 
-../opennic_update.sh
+set -e
 
 cp result/opennic.conf /etc/knot-resolver/
 cp result/knot-aliases-alt.conf /etc/knot-resolver/

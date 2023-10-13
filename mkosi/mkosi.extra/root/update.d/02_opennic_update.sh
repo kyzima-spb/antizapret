@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
+
 set -e
 
 apiUrl='https://api.opennicproject.org/geoip/?bare&ipv=4&res=10'
-confFile='result/opennic.conf'
+confFile=${1:-'result/opennic.conf'}
 
 echo -n 'Update OpenNIC DNS servers...'
 

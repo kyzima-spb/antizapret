@@ -16,7 +16,7 @@ git clone https://bitbucket.org/anticensority/antizapret-pac-generator-light.git
 # Apply patch
 git apply --directory antizapret patch.diff && rm patch.diff
 mv -f antizapret-process.sh antizapret/process.sh
-
+mv update.d antizapret
 
 # Clean package cache and remove the lists
 apt clean
