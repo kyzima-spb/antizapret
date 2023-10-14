@@ -1,6 +1,7 @@
 [submodule "antizapret-vpn-container"]
 	path = antizapret-vpn-container
 	url = git@github.com:kyzima-spb/antizapret-vpn-container.git
+	branch = dev-master
 [submodule "antizapret-pac-generator-light"]
 	path = antizapret-pac-generator-light
-	url = https://bitbucket.org/anticensority/antizapret-pac-generator-light.git
+	url = git@github.com:kyzima-spb/antizapret-pac-generator-light.git
