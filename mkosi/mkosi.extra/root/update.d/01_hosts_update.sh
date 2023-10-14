@@ -2,7 +2,7 @@
 
 set -e
 
-url='https://raw.githubusercontent.com/xtrime-ru/antizapret-vpn-docker/master/include-hosts-custom.txt'
+url='https://kyzima-spb.github.io/antizapret/include-hosts-custom.txt'
 hostsFile=${1:-'config/include-hosts-custom.txt'}
 tempFile="$(mktemp)"
 
