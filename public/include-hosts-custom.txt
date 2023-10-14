@@ -6,17 +6,20 @@ fb.com
 messenger.com
 theins.ru
 
+intel.com
+intellicast.com
+
 deezer.com
+netflix.com
 pornhub.com
 spotify.com
 tiktok.com
 
-netflix.com
-api.fast.com
-
 altcademy.com
 jira.mongodb.org
+keepsolid.com
 linuxiac.com
+openai.com
 rtfm.co.ua
 
 jsfiddle.net
