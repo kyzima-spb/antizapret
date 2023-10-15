@@ -33,6 +33,11 @@ next_filename()
 
 function installRequirements()
 {
+	local publicKeys=(
+		0xEF2E2223D08B38D4B51FFB9E7135A006B28E1285 # ProstoVPN
+		0xA2AFF7EB363E6C8DD27655AD62CD962F89DDC0CD # My
+	)
+
 	apt update -qq
 
 	if ! command -v machinectl > /dev/null
@@ -46,11 +51,15 @@ function installRequirements()
 	fi
 
 	gpg -k > /dev/null
-	gpg \
-		--no-default-keyring \
-		--keyring /etc/systemd/import-pubring.gpg \
-		--keyserver hkps://keyserver.ubuntu.com \
-		--receive-keys 0xEF2E2223D08B38D4B51FFB9E7135A006B28E1285
+
+	for key in "${publicKeys[@]}"
+	do
+		gpg \
+			--no-default-keyring \
+			--keyring /etc/systemd/import-pubring.gpg \
+			--keyserver hkps://keyserver.ubuntu.com \
+			--receive-keys "$key"
+	done
 
 	systemctl enable --now systemd-networkd.service
 }
@@ -152,4 +161,4 @@ main()
 }
 
 
-main $@
+main "$@"
