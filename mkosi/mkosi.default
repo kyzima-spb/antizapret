@@ -5,7 +5,6 @@ Distribution=debian
 Release=buster
 
 [Output]
-#Format=directory
 Format=tar
 Output=rootfs.tar.xz
 Bootable=no
@@ -13,9 +12,7 @@ Bootable=no
 [Validation]
 CheckSum=true
 Sign=true
-# ProstoVPN PGP key ID
-# Key=7135A006B28E1285
-Key=DEA196B750A0EDC3
+Key=62CD962F89DDC0CD
 
 [Packages]
 WithNetwork=true
@@ -43,3 +40,4 @@ Packages=bash
          vim-tiny
          git
          fping
+         socat
