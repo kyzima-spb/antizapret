@@ -6,7 +6,7 @@
 # 
 # wget -qO- http://192.168.88.200:8000/install.sh | sudo bash
 # wget -qO- http://192.168.88.200:8000/install.sh | sudo IMAGE=test.tar.xz NAME=antizapret-test bash
-# wget -qO- http://192.168.88.200:8000/install.sh | sudo bash /dev/stdin uninstall
+# wget -qO- http://192.168.88.200:8000/install.sh | sudo COMMAND=uninstall bash
 
 set -e
 
@@ -14,7 +14,7 @@ NAME=${NAME:-'antizapret-vpn'}
 IMAGE=${IMAGE:-'https://antizapret.prostovpn.org/container-images/az-vpn/rootfs.tar.xz'}
 
 
-next_filename()
+function next_filename()
 {
 	filename="$1"
 
@@ -28,6 +28,45 @@ next_filename()
 	done
 
 	echo "$filename"
+}
+
+
+function backupCredentials()
+{
+    local name=$1
+    local backupFile=${2:-"${name}-backup.tar.xz"}
+    backupFile="$(next_filename "$backupFile")"
+
+	if ! systemd-nspawn -q --pipe --private-network -M "$name" -U tar -cPJO \
+		/etc/openvpn/server/keys/ca.crt \
+		/etc/openvpn/server/keys/antizapret-server.crt \
+		/etc/openvpn/server/keys/antizapret-server.key \
+		/root/easy-rsa-ipsec/CLIENT_KEY/antizapret-client-tcp.ovpn \
+		/root/easy-rsa-ipsec/CLIENT_KEY/antizapret-client-udp.ovpn \
+		/root/easy-rsa-ipsec/easyrsa3/pki \
+		> "$backupFile"
+	then
+		rm -f "$backupFile"
+		return 1
+	fi
+
+	echo >&2 "OpenVPN credentials saved to ${backupFile}"
+}
+
+
+function restoreCredentials() {
+    local name=$1
+    local backupFile=$2
+
+    if [[ -z "$backupFile" ]]
+    then
+		echo >&2 'BACKUP_FILE required.'
+    	return 1
+	fi
+
+	systemd-nspawn -q --pipe --private-network -M "$name" -U tar -C / -xPJf - < "$backupFile"
+
+	echo >&2 "OpenVPN credentials restored from ${backupFile}"
 }
 
 
@@ -112,7 +151,7 @@ function install()
 	echo "[OK]"
 	echo "OpenVPN configuration file saved to ${target}"
 	
-	chown $SUDO_UID:$SUDO_GID "$target"
+	chown "$SUDO_UID:$SUDO_GID" "$target"
 }
 
 
@@ -147,7 +186,11 @@ main()
 		exit 1
 	fi
 
-	case "$1" in
+	case "$COMMAND" in
+		backup)
+			backupCredentials "$NAME" "$BACKUP_FILE" ;;
+		restore)
+			restoreCredentials "$NAME" "$BACKUP_FILE" ;;
 		install|'')
 			installRequirements
 			install "$NAME" "$IMAGE" ;;

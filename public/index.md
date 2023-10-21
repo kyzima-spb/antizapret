@@ -16,8 +16,10 @@ AntiZapret Installer
 
 Установщику можно задать следующие переменные окружения:
 
-* `IMAGE` - URL-адрес или путь к файлу с образом
+* `COMMAND` - имя команды, по-умолчанию `install`
 * `NAME` - имя контейнера, по-умолчанию `antizapret-vpn`
+* `IMAGE` - URL-адрес или путь к файлу с образом
+* `BACKUP_FILE` - путь к файлу с бекапом OpenVPN для сохранения или восстановления
 
 1.  Установка официального контейнера:
     ```shell
@@ -25,13 +27,13 @@ AntiZapret Installer
     ```
 2.  Установка моей версии контейнера с улучшениями:
     ```shell
-    wget -qO- https://kyzima-spb.github.io/antizapret/installer.sh |\
+    wget -qO- https://kyzima-spb.github.io/antizapret/installer.sh | \
     IMAGE=https://antizapret.kyzima-spb.com/rootfs.tar.xz \
     bash
     ```
 3.  Установка контейнера с указанием имени:
     ```shell
-    wget -qO- https://kyzima-spb.github.io/antizapret/installer.sh |\
+    wget -qO- https://kyzima-spb.github.io/antizapret/installer.sh | \
     NAME=antizapret \
     bash
     ```
@@ -45,18 +47,16 @@ scp <USER>@<PUBLIC_IP>:<PATH_TO_OVPN_FILE> <DEST_PATH>
 
 ## Удаление
 
-Чтобы удалить контейнер, образ и все связанные файлы выполните:
-```shell
-wget -qO- https://kyzima-spb.github.io/antizapret/installer.sh |\
-bash /dev/stdin uninstall
-```
-
-Если при установке было задано другое имя, то выполните:
-```shell
-wget -qO- https://kyzima-spb.github.io/antizapret/installer.sh |\
-NAME=antizapret \
-bash /dev/stdin uninstall
-```
+1.  Чтобы удалить контейнер, образ и все связанные файлы выполните:
+    ```shell
+    wget -qO- https://kyzima-spb.github.io/antizapret/installer.sh | \
+    COMMAND=uninstall bash
+    ```
+2.  Если при установке было задано другое имя, то выполните:
+    ```shell
+    wget -qO- https://kyzima-spb.github.io/antizapret/installer.sh | \
+    COMMAND=uninstall NAME=antizapret bash
+    ```
 
 ## Какой VPS выбрать?
 
