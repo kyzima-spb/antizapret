@@ -8,6 +8,7 @@ theins.ru
 
 intel.com
 intellicast.com
+dell.com
 
 deezer.com
 netflix.com
