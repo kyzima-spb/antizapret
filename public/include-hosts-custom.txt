@@ -20,6 +20,7 @@ altcademy.com
 jira.mongodb.org
 keepsolid.com
 linuxiac.com
+pendrivelinux.com
 openai.com
 rtfm.co.ua
 
