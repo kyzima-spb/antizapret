@@ -33,7 +33,7 @@ jobs:
           source: ./public
           destination: ./_site
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
   deploy:
     environment:
       name: github-pages
