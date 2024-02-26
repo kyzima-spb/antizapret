@@ -32,7 +32,7 @@ jobs:
         uses: actions/checkout@v4
       -
         name: Download image
-        working-directory: ./public
+        working-directory: ./www
         env:
           FTP_HOST: "${{ secrets.FTP_HOST }}"
           FTP_USER: ${{ secrets.FTP_USER }}
