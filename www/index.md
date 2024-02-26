@@ -63,9 +63,9 @@ AntiZapret VPN Container
 
 *Часть ссылок — реферальные. При покупке сервера по реферальным ссылкам, часть оплаченной суммы пойдёт на содержание серверов АнтиЗапрета.*
 
-* [ITLDC](https://itldc.com/?from=51099) (сервер SSD VDS 1G за €3.49)
-* [Vultr](https://www.vultr.com/?ref=8592407-6G) (серверы за $3.5 и $5, при регистрации по ссылке даётся бонус на первый месяц)
-* [Scaleway](https://www.scaleway.com/en/) (сервер DEV1-S за €2.99).
+* [ITLDC](https://itldc.com/?from=51099) (сервер SSD VDS 1G за €3.99)
+* [Vultr](https://www.vultr.com/?ref=8592407-6G) (серверы за $5, при регистрации по ссылке даётся бонус на первый месяц)
+* [Scaleway](https://www.scaleway.com/en/)
 
 ## Установка
 
