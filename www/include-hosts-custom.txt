@@ -28,5 +28,6 @@ udemy.com
 
 jsfiddle.net
 
+hashicorp.com
 oaistatic.com
 openai.com
