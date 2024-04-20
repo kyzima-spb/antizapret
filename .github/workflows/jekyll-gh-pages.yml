@@ -47,7 +47,7 @@ jobs:
                "${FTP_HOST}/rootfs.tar.xz.manifest"
       - 
         name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5
       - 
         name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
