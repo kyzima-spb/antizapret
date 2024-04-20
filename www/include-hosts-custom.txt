@@ -31,3 +31,5 @@ jsfiddle.net
 hashicorp.com
 oaistatic.com
 openai.com
+
+rufus.ie
