@@ -29,6 +29,8 @@ udemy.com
 jsfiddle.net
 
 chatgpt.com
+docker.com
+docker.io
 hashicorp.com
 oaistatic.com
 openai.com
