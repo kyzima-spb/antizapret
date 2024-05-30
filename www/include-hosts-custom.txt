@@ -28,6 +28,8 @@ udemy.com
 
 jsfiddle.net
 
+docker.com
+docker.io
 hashicorp.com
 oaistatic.com
 openai.com
