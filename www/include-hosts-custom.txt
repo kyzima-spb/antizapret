@@ -29,6 +29,7 @@ udemy.com
 jsfiddle.net
 
 chatgpt.com
+graylog.org
 hashicorp.com
 oaistatic.com
 openai.com
