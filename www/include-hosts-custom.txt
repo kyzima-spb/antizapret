@@ -36,4 +36,5 @@ openai.com
 
 rufus.ie
 
+aws.amazon.com
 digitalocean.com
