@@ -25,6 +25,7 @@ linuxiac.com
 pauk.org.ua
 pendrivelinux.com
 rtfm.co.ua
+spacelift.io
 udemy.com
 
 jsfiddle.net
