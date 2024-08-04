@@ -15,9 +15,9 @@ intel.com
 intellicast.com
 dell.com
 
-bcvcdn.com
 deezer.com
 netflix.com
+phncdn.com
 pornhub.com
 spotify.com
 tiktok.com
