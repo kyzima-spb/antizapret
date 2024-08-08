@@ -10,6 +10,7 @@ theins.ru
 
 googlevideo.com
 youtube.com
+ytimg.com
 
 intel.com
 intellicast.com
