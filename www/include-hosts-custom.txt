@@ -42,6 +42,7 @@ jsfiddle.net
 chatgpt.com
 graylog.org
 hashicorp.com
+jetbrains.com
 oaistatic.com
 openai.com
 
