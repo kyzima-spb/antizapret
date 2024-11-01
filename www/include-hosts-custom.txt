@@ -33,6 +33,7 @@ keepsolid.com
 linuxiac.com
 pauk.org.ua
 pendrivelinux.com
+picsum.photos
 rtfm.co.ua
 spacelift.io
 udemy.com
