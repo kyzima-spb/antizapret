@@ -17,6 +17,7 @@ intel.com
 intellicast.com
 dell.com
 
+aerisweather.com
 bcvcdn.com
 deezer.com
 netflix.com
