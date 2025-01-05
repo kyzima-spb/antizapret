@@ -17,6 +17,7 @@ intel.com
 intellicast.com
 dell.com
 
+aerisweather.com
 bcvcdn.com
 deezer.com
 netflix.com
@@ -33,6 +34,7 @@ keepsolid.com
 linuxiac.com
 pauk.org.ua
 pendrivelinux.com
+picsum.photos
 rtfm.co.ua
 spacelift.io
 udemy.com
@@ -43,8 +45,10 @@ chatgpt.com
 graylog.org
 hashicorp.com
 jetbrains.com
+mongodb.com
 oaistatic.com
 openai.com
+redis.io
 
 rufus.ie
 
