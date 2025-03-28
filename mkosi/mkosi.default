@@ -9,10 +9,7 @@ Format=tar
 Output=rootfs.tar.xz
 Bootable=no
 
-[Validation]
-CheckSum=true
-Sign=true
-Key=62CD962F89DDC0CD
+
 
 [Packages]
 WithNetwork=true
@@ -21,6 +18,7 @@ Packages=bash
          ipcalc
          sipcalc
          gawk
+         gnupg
          idn
          iptables
          ferm
