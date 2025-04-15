@@ -45,6 +45,7 @@ chatgpt.com
 graylog.org
 hashicorp.com
 jetbrains.com
+midjourney.com
 mongodb.com
 oaistatic.com
 openai.com
